@@ -1,0 +1,181 @@
+/* Reset básico y fuente */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f9f9f7; /* blanco hueso */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #222;
+  }
+  
+  .calculadora {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    padding: 25px 30px 35px 30px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Pantalla resultado */
+  #resultado {
+    width: 100%;
+    height: 65px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: right;
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    background-color: #f1f3f5;
+    color: #222222;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.05);
+    user-select: none;
+  }
+  
+  /* Contenedores botones con gap */
+  .numeros, .operaciones, .Memoria {
+    display: grid;
+    gap: 15px;
+  }
+  
+  /* Números: 4 columnas */
+  .numeros {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Operaciones: 4 columnas */
+  .operaciones {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Memoria: 3 columnas */
+  .Memoria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Botones comunes */
+  button {
+    border: none;
+    border-radius: 12px;
+    padding: 18px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  /* Botones números: azul medianoche */
+  .numeros button {
+    background: #0b2545;
+    box-shadow: 0 5px 10px #071933;
+  }
+  
+  .numeros button:hover {
+    background: #12315a;
+    box-shadow: 0 8px 18px #0b2545;
+    transform: translateY(-3px);
+  }
+  
+  .numeros button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px #071933;
+  }
+  
+  /* Botones operaciones: naranja vibrante */
+  .operaciones button {
+    background: #f05d23;
+    box-shadow: 0 5px 10px #b84306;
+    font-weight: 700;
+  }
+  
+  .operaciones button:hover {
+    background: #d94a06;
+    box-shadow: 0 8px 18px #b84306;
+    transform: translateY(-3px);
+  }
+  
+  .operaciones button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px #b84306;
+  }
+  
+  /* Botón igual: verde lima */
+  .Igual button {
+    background: #58c45d;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 14px;
+    padding: 20px 0;
+    box-shadow: 0 6px 15px #3e8a35;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .Igual button:hover {
+    background: #3e8a35;
+    box-shadow: 0 8px 20px #2e5e24;
+    transform: translateY(-3px);
+  }
+  
+  .Igual button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px #2e5e24;
+  }
+  
+  /* Botones Memoria: gris oscuro */
+  .Memoria button {
+    background: #4a4a4a;
+    box-shadow: 0 5px 12px #2a2a2a;
+    font-weight: 600;
+    color: #eee;
+    font-size: 1.1rem;
+    padding: 15px 0;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  .Memoria button:hover {
+    background: #6a6a6a;
+    box-shadow: 0 8px 18px #444;
+    transform: translateY(-3px);
+  }
+  
+  .Memoria button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px #444;
+  }
+  
+  /* Responsive pequeño */
+  @media (max-width: 400px) {
+    .calculadora {
+      width: 90vw;
+      padding: 20px 15px 25px 15px;
+    }
+    #resultado {
+      height: 55px;
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1.1rem;
+      padding: 15px 0;
+    }
+  }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
@@ -11,20 +12,20 @@
     <section class = "calculadora">
 
 
-        <p readonly id = "resultado"></p>
+        <input type="text" readonly value = "" id = "resultado">
 
 
         <div class = "numeros">
-        <button onclick="enviarValores('7')">7</button>
-        <button onclick="enviarValores('8')">8</button>
-        <button onclick="enviarValores('9')">9</button>
-        <button onclick="enviarValores('4')">4</button>
-        <button onclick="enviarValores('5')">5</button>
-        <button onclick="enviarValores('6')">6</button>
-        <button onclick="enviarValores('1')">1</button>
-        <button onclick="enviarValores('2')">2</button>
-        <button onclick="enviarValores('3')">3</button>
-        <button onclick="enviarValores('0')">0</button>
+        <button onclick="enviarValor('7')">7</button>
+        <button onclick="enviarValor('8')">8</button>
+        <button onclick="enviarValor('9')">9</button>
+        <button onclick="enviarValor('4')">4</button>
+        <button onclick="enviarValor('5')">5</button>
+        <button onclick="enviarValor('6')">6</button>
+        <button onclick="enviarValor('1')">1</button>
+        <button onclick="enviarValor('2')">2</button>
+        <button onclick="enviarValor('3')">3</button>
+        <button onclick="enviarValor('0')">0</button>
         </div>
 
         <div class = "operaciones">
@@ -35,8 +36,14 @@
         </div>
         
         <div class = "Igual">
-        <button onclick="enviarValores('=')">Obtener Resultado</button>
+        <button onclick="terminarCuenta()">Obtener Resultado</button>
         </div>
+        
+        <div class="Memoria">
+            <button onclick="AC()">AC</button>
+            <button onclick="GuardarResultado()">GuardarResultado</button>
+            <button onclick="borrarUltimo()">← Borrar</button>
+          </div>
 
     </section>
 </body>
